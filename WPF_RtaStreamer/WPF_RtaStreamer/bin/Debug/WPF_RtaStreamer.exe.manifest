@@ -42,26 +42,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="rtaNetworking.Streaming.dll" size="15872">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="rtaNetworking.Streaming.dll" size="19456">
       <assemblyIdentity name="rtaNetworking.Streaming" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pu4XHPV9DTCGtM4sj4t+lrY91HKiwjHfxHz5KohtqoQ=</dsig:DigestValue>
+        <dsig:DigestValue>SG5Y5XXMW2+thsg/PGkcEBwuUj8ngOxoFnd8n2/hmdo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WPF_RtaStreamer.exe" size="11776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WPF_RtaStreamer.exe" size="10752">
       <assemblyIdentity name="WPF_RtaStreamer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FC04lNjiilKLZgeo7XXkFhT+1sDXgvs3+Z1pGX8o0EY=</dsig:DigestValue>
+        <dsig:DigestValue>71kBbEA3jETJj0xkxqfhsd5aEAqrx9u0oym+L8a+KgE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

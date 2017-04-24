@@ -13,3 +13,8 @@ C:\Users\Acer\Documents\Visual Studio 2013\Projects\WPF_RtaStreamer\rtaNetworkin
 C:\Users\Acer\Documents\Visual Studio 2013\Projects\WPF_RtaStreamer\rtaNetworking.Streaming\obj\Debug\rtaNetworking.Streaming.csprojResolveAssemblyReference.cache
 C:\Users\Acer\Documents\Visual Studio 2013\Projects\WPF_RtaStreamer\rtaNetworking.Streaming\obj\Debug\rtaNetworking.Streaming.dll
 C:\Users\Acer\Documents\Visual Studio 2013\Projects\WPF_RtaStreamer\rtaNetworking.Streaming\obj\Debug\rtaNetworking.Streaming.pdb
+E:\projects\wpf\nafisScreenShare\WPF_RTA_SERVER_CLIENT\WPF_RtaStreamer\rtaNetworking.Streaming\bin\Debug\rtaNetworking.Streaming.dll
+E:\projects\wpf\nafisScreenShare\WPF_RTA_SERVER_CLIENT\WPF_RtaStreamer\rtaNetworking.Streaming\bin\Debug\rtaNetworking.Streaming.pdb
+E:\projects\wpf\nafisScreenShare\WPF_RTA_SERVER_CLIENT\WPF_RtaStreamer\rtaNetworking.Streaming\obj\Debug\rtaNetworking.Streaming.csprojResolveAssemblyReference.cache
+E:\projects\wpf\nafisScreenShare\WPF_RTA_SERVER_CLIENT\WPF_RtaStreamer\rtaNetworking.Streaming\obj\Debug\rtaNetworking.Streaming.dll
+E:\projects\wpf\nafisScreenShare\WPF_RTA_SERVER_CLIENT\WPF_RtaStreamer\rtaNetworking.Streaming\obj\Debug\rtaNetworking.Streaming.pdb
