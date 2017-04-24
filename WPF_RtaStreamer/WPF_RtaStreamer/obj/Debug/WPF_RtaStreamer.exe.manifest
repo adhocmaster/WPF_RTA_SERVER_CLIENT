@@ -49,19 +49,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TR0zuEzzq3qNJWazkPGTB2IsG2mOug9AXCC/G27m+Nk=</dsig:DigestValue>
+        <dsig:DigestValue>TrhyVJWfq/nfdnI45iKBcr4hbPrn7KGtmUZ/xke/gvU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WPF_RtaStreamer.exe" size="11776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WPF_RtaStreamer.exe" size="10752">
       <assemblyIdentity name="WPF_RtaStreamer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>m94+fgTu8PwGbnhoxqDTHDFYXLT/KPRL5cT62Xv5A54=</dsig:DigestValue>
+        <dsig:DigestValue>wlIw0EGixIzgQUY9vd8Zljtxv08+CQaPpy9PIoQBz7M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

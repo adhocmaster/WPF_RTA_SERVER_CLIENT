@@ -22,7 +22,7 @@ namespace rtaNetworking.Streaming.nafis {
 
             string myIP = Dns.GetHostByName( hostName ).AddressList[lastIpAddressIndex].ToString();
 
-            string myPORT = server.Port.ToString();
+            string myPORT = server.Port().ToString();
 
             string ipAndPortURL = "http://" + myIP + ":" + myPORT;  //made like an url 
             //since the client player only accepts this format

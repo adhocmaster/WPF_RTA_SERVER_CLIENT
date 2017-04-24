@@ -61,12 +61,13 @@ namespace WPF_RtaStreamer
             if ( buttonClicked ==0 )
             {
                 buttonClicked = 1;
+
                 _Server = new ImageStreamingServer();
 
-                int safePort = ServerNetworkHelper.getAvailablePort( 8080 );                 //8080 is just the first try
-                _Server.Start(safePort);                              //this where port is given inside Start()
+                _Server.StartWithRandomPort();                            
 
-                IpBox.Text = ServerNetworkHelper.getServerIpAndPortURL( _Server );
+                IpBox.Text = _Server.getServerURL();
+
                 initializeTimer();
             }
             else

@@ -12,7 +12,11 @@ namespace rtaNetworking.Streaming.nafis {
 
         private List<Socket> _Clients;
         private Thread _Thread;
-        public static int myPort;
+        private int myPort;
+        public int Port {
+            get { return myPort; }
+            set { myPort = value; }
+        } 
 
         public ImageStreamingServer()
             : this( Screen.Snapshots( 480, true ) ) {
@@ -37,9 +41,6 @@ namespace rtaNetworking.Streaming.nafis {
 
         }
 
-        public int getPortNumber() {
-            return myPort;
-        }
 
         /// <summary>
         /// Gets or sets the source of images that will be streamed to the 
@@ -63,18 +64,25 @@ namespace rtaNetworking.Streaming.nafis {
         /// running and ready to serve any client requests.
         /// </summary>
         public bool IsRunning { get { return ( _Thread != null && _Thread.IsAlive ); } }
+        public void StartWithRandomPort() {
 
+            int safePort = ServerNetworkHelper.getAvailablePort( 8080 );                 //8080 is just the first try
+            Start( safePort );
+
+        }
         /// <summary>
         /// Starts the server to accepts any new connections on the specified port.
         /// </summary>
         /// <param name="port"></param>
+        
         public void Start( int port ) {
 
             lock ( this ) {
 
-                _Thread = new Thread( new ParameterizedThreadStart( ServerThread ) );
+                this.Port = port;
+                _Thread = new Thread( new ThreadStart( ServerThread ) );
                 _Thread.IsBackground = true;
-                _Thread.Start( port );
+                _Thread.Start();
             }
 
         }
@@ -117,22 +125,23 @@ namespace rtaNetworking.Streaming.nafis {
         /// connections from clients.
         /// </summary>
         /// <param name="state"></param>
-        private void ServerThread( object state ) {
+        private void ServerThread() {
 
             try {
+
                 Socket Server = new Socket( AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp );
 
-                Server.Bind( new IPEndPoint( IPAddress.Any, ( int ) state ) );
+                Server.Bind( new IPEndPoint( IPAddress.Any, Port ) );
                 Server.Listen( 10 );    ///////////////5 given instead of 10
 
-                System.Diagnostics.Debug.WriteLine( string.Format( "Server started on port {0}.", state ) );
+                System.Diagnostics.Debug.WriteLine( string.Format( "Server started on port {0}.", Port ) );
 
-                myPort = ( int ) state;
-                System.Diagnostics.Debug.WriteLine( "Checking my port : " + myPort.ToString() );
+                System.Diagnostics.Debug.WriteLine( "Checking my port : " + Port.ToString() );
 
 
                 foreach ( Socket client in Server.IncommingConnections() )
                     ThreadPool.QueueUserWorkItem( new WaitCallback( ClientThread ), client );
+
 
             } catch {
                 System.Diagnostics.Debug.WriteLine( "Exception Caught for multiple entry" );
@@ -183,6 +192,15 @@ namespace rtaNetworking.Streaming.nafis {
         }
 
         #endregion
+
+        public string getServerURL() {
+
+            return ServerNetworkHelper.getServerURL( this );
+
+        }
+
+        
+
     }
 
 }
