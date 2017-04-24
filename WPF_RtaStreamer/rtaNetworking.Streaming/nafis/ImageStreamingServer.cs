@@ -16,30 +16,16 @@ namespace rtaNetworking.Streaming.nafis {
         public int Port {
             get { return myPort; }
             set { myPort = value; }
-        } 
-
-        public ImageStreamingServer()
-            : this( Screen.Snapshots( 480, true ) ) {
-
         }
 
-        /// <summary>
-        /// ///////my function to get the port number
-        /// </summary>
-        /// <param name="imagesSource"></param>
+        private int _maxClient = 16;
 
-
-
-
-        public ImageStreamingServer( IEnumerable<Image> imagesSource ) {
-
-            _Clients = new List<Socket>();
-            _Thread = null;
-
-            this.ImagesSource = imagesSource;
-            this.Interval = 67;                           //frame rate = 1000ms / Interval
-
+        public int MaxClients {
+            get { return _maxClient; }
+            set { _maxClient = value; }
         }
+        
+
 
 
         /// <summary>
@@ -64,6 +50,29 @@ namespace rtaNetworking.Streaming.nafis {
         /// running and ready to serve any client requests.
         /// </summary>
         public bool IsRunning { get { return ( _Thread != null && _Thread.IsAlive ); } }
+
+        public ImageStreamingServer()
+            : this( Screen.Snapshots( 480, true ) ) {
+
+        }
+
+        /// <summary>
+        /// ///////my function to get the port number
+        /// </summary>
+        /// <param name="imagesSource"></param>
+
+
+
+
+        public ImageStreamingServer( IEnumerable<Image> imagesSource ) {
+
+            _Clients = new List<Socket>();
+            _Thread = null;
+
+            this.ImagesSource = imagesSource;
+            this.Interval = 67;                           //frame rate = 1000ms / Interval
+
+        }
         public void StartWithRandomPort() {
 
             int safePort = ServerNetworkHelper.getAvailablePort( 8080 );                 //8080 is just the first try
@@ -132,7 +141,7 @@ namespace rtaNetworking.Streaming.nafis {
                 Socket Server = new Socket( AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp );
 
                 Server.Bind( new IPEndPoint( IPAddress.Any, Port ) );
-                Server.Listen( 10 );    ///////////////5 given instead of 10
+                Server.Listen( MaxClients );    
 
                 System.Diagnostics.Debug.WriteLine( string.Format( "Server started on port {0}.", Port ) );
 
