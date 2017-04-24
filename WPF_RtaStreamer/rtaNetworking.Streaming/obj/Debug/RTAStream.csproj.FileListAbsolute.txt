@@ -1,0 +1,4 @@
+E:\projects\wpf\nafisScreenShare\WPF_RTA_SERVER_CLIENT\WPF_RtaStreamer\rtaNetworking.Streaming\bin\Debug\rtaNetworking.Streaming.dll
+E:\projects\wpf\nafisScreenShare\WPF_RTA_SERVER_CLIENT\WPF_RtaStreamer\rtaNetworking.Streaming\bin\Debug\rtaNetworking.Streaming.pdb
+E:\projects\wpf\nafisScreenShare\WPF_RTA_SERVER_CLIENT\WPF_RtaStreamer\rtaNetworking.Streaming\obj\Debug\rtaNetworking.Streaming.dll
+E:\projects\wpf\nafisScreenShare\WPF_RTA_SERVER_CLIENT\WPF_RtaStreamer\rtaNetworking.Streaming\obj\Debug\rtaNetworking.Streaming.pdb
