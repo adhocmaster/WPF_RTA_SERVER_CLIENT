@@ -52,13 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MjpegWriter.cs" />
+    <Compile Include="nafis\MjpegWriter.cs" />
     <Compile Include="nafis\ImageStreamingServer.cs" />
     <Compile Include="nafis\Screen.cs" />
     <Compile Include="nafis\ServerNetworkHelper.cs" />
     <Compile Include="nafis\SocketExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ImageStreamingServer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

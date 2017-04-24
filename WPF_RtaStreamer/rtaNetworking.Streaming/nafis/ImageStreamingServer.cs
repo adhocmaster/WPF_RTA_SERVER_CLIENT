@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading;
 
 namespace rtaNetworking.Streaming.nafis {
+
+    /// <summary>
+    /// Provides a streaming server that can be used to stream any images source
+    /// to any client.
+    /// </summary>
     public class ImageStreamingServer : IDisposable {
 
         private List<Socket> _Clients;
@@ -153,6 +158,7 @@ namespace rtaNetworking.Streaming.nafis {
 
 
             } catch {
+
                 System.Diagnostics.Debug.WriteLine( "Exception Caught for multiple entry" );
             }
 
